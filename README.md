@@ -100,7 +100,9 @@ APNSConfig.password=xyzabcd
 ## Batch related
 ## Total channels to be created is batchProcssConnCount + batchAcceptConnCount
 APNSConfig.batchProcssConnCount=50
+
 APNSConfig.batchAcceptConnCount=25
+
 ## Total number of threads in event loop
 APNSConfig.batchProcessingCount=20
 ## Max queue size
