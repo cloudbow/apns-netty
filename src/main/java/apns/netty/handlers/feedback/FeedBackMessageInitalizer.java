@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -62,6 +62,13 @@ public class FeedBackMessageInitalizer extends
 
     /* (non-Javadoc)
      * @see io.netty.channel.ChannelInitializer#initChannel(io.netty.channel.Channel)
+     */
+    /**
+     * Inits the channel.
+     * @param ch
+     *            the ch
+     * @throws Exception
+     *             the exception
      */
     @Override
     public void initChannel(final SocketChannel ch) throws Exception {

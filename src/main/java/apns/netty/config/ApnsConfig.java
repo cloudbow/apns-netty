@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -498,7 +498,8 @@ public class ApnsConfig {
      * @param maxBatchQueuePollerThreads
      *            the new max batch queue poller threads
      */
-    public void setMaxBatchQueuePollerThreads(int maxBatchQueuePollerThreads) {
+    public void setMaxBatchQueuePollerThreads(
+            final int maxBatchQueuePollerThreads) {
         this.maxBatchQueuePollerThreads = maxBatchQueuePollerThreads;
     }
 

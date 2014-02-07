@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -44,6 +44,15 @@ public class FeedBackHandler extends
     /* (non-Javadoc)
      * @see io.netty.channel.ChannelHandlerAdapter#exceptionCaught(io.netty.channel.ChannelHandlerContext, java.lang.Throwable)
      */
+    /**
+     * Exception caught.
+     * @param ctx
+     *            the ctx
+     * @param cause
+     *            the cause
+     * @throws Exception
+     *             the exception
+     */
     @Override
     public void exceptionCaught(final ChannelHandlerContext ctx,
             final Throwable cause) throws Exception {
@@ -57,6 +66,15 @@ public class FeedBackHandler extends
      * @see
      * io.netty.channel.SimpleChannelInboundHandler#messageReceived(io.netty
      * .channel.ChannelHandlerContext, java.lang.Object)
+     */
+    /**
+     * Message received.
+     * @param ctx
+     *            the ctx
+     * @param msg
+     *            the msg
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void messageReceived(final ChannelHandlerContext ctx,

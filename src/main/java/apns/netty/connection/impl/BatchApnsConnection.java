@@ -3,20 +3,12 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
  ***********************************************************************/
 package apns.netty.connection.impl;
-
-import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -42,14 +34,10 @@ import apns.netty.queues.batch.BatchMessageQueue;
 @Component
 public class BatchApnsConnection implements Connection {
 
-    /**
-     *
-     */
+    /** The Constant INTERRUPTED_EXCEPTION. */
     private static final String INTERRUPTED_EXCEPTION = "Interrupted exception";
 
-    /**
-     *
-     */
+    /** The Constant RETRY_COUNT. */
     private static final int RETRY_COUNT = 5;
 
     /** The Constant WRITING_USING_RANDOM_CHANNEL. */
@@ -151,6 +139,7 @@ public class BatchApnsConnection implements Connection {
     /** The atomic batch counter. */
     private final AtomicInteger atomicBatchCounter = new AtomicInteger(0);
 
+    /** The atomic thread counter. */
     private final AtomicInteger atomicThreadCounter = new AtomicInteger(0);
 
     /** The batch nio event loop group. */
@@ -300,11 +289,20 @@ public class BatchApnsConnection implements Connection {
         return atomicBatchCounter;
     }
 
+    /**
+     * Sets the batch channel group.
+     * @param batchChannelGroup
+     *            the new batch channel group
+     */
     public void setBatchChannelGroup(
             final BlockingQueue<Channel> batchChannelGroup) {
         this.batchChannelGroup = batchChannelGroup;
     }
 
+    /**
+     * Gets the batch channel group.
+     * @return the batch channel group
+     */
     public BlockingQueue<Channel> getBatchChannelGroup() {
         return this.batchChannelGroup;
     }

@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -61,6 +61,17 @@ public class FeedBackDecoder extends ByteToMessageDecoder {
      * (non-Javadoc)
      * @see io.netty.handler.codec.ByteToMessageDecoder#decode(io.netty.channel.
      * ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)
+     */
+    /**
+     * Decode.
+     * @param ctx
+     *            the ctx
+     * @param in
+     *            the in
+     * @param out
+     *            the out
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void decode(final ChannelHandlerContext ctx, final ByteBuf in,

@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -58,6 +58,7 @@ public class SingleMessageInitializer extends
     private static final Logger logger = Logger
             .getLogger(SingleMessageInitializer.class);
 
+    /** The Constant CODEC. */
     private static final String CODEC = "codec";
 
     /** The apns config. */
@@ -76,6 +77,13 @@ public class SingleMessageInitializer extends
      * (non-Javadoc)
      * @see
      * io.netty.channel.ChannelInitializer#initChannel(io.netty.channel.Channel)
+     */
+    /**
+     * Inits the channel.
+     * @param ch
+     *            the ch
+     * @throws Exception
+     *             the exception
      */
     @Override
     public void initChannel(final SocketChannel ch) throws Exception {

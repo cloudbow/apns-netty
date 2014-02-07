@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -21,18 +21,28 @@ import javax.net.ssl.X509TrustManager;
  * @author Sylvain Pedneault
  */
 class ServerTrustingTrustManager implements X509TrustManager {
+    
+    /* (non-Javadoc)
+     * @see javax.net.ssl.X509TrustManager#checkClientTrusted(java.security.cert.X509Certificate[], java.lang.String)
+     */
     @Override
     public void checkClientTrusted(final X509Certificate[] chain,
             final String authType) throws CertificateException {
         throw new CertificateException("Client is not trusted.");
     }
 
+    /* (non-Javadoc)
+     * @see javax.net.ssl.X509TrustManager#checkServerTrusted(java.security.cert.X509Certificate[], java.lang.String)
+     */
     @Override
     public void checkServerTrusted(final X509Certificate[] chain,
             final String authType) {
         // trust all servers
     }
 
+    /* (non-Javadoc)
+     * @see javax.net.ssl.X509TrustManager#getAcceptedIssuers()
+     */
     @Override
     public X509Certificate[] getAcceptedIssuers() {
         return null;// new X509Certificate[0];

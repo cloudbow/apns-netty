@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -57,6 +57,15 @@ public class ApnsSSLHandler extends SslHandler {
      * (non-Javadoc)
      * @see io.netty.handler.ssl.SslHandler#exceptionCaught(io.netty.channel.
      * ChannelHandlerContext, java.lang.Throwable)
+     */
+    /**
+     * Exception caught.
+     * @param ctx
+     *            the ctx
+     * @param cause
+     *            the cause
+     * @throws Exception
+     *             the exception
      */
     @Override
     public void exceptionCaught(final ChannelHandlerContext ctx,

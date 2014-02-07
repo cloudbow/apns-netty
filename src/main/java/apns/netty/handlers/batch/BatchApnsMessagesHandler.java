@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -60,6 +60,15 @@ public class BatchApnsMessagesHandler extends
      * io.netty.channel.SimpleChannelInboundHandler#messageReceived(io.netty
      * .channel.ChannelHandlerContext, java.lang.Object)
      */
+    /**
+     * Message received.
+     * @param ctx
+     *            the ctx
+     * @param apnsResponse
+     *            the apns response
+     * @throws Exception
+     *             the exception
+     */
     @Override
     protected void messageReceived(final ChannelHandlerContext ctx,
             final ApnsResponse apnsResponse) throws Exception {
@@ -81,6 +90,15 @@ public class BatchApnsMessagesHandler extends
      * @see
      * io.netty.channel.ChannelHandlerAdapter#exceptionCaught(io.netty.channel
      * .ChannelHandlerContext, java.lang.Throwable)
+     */
+    /**
+     * Exception caught.
+     * @param ctx
+     *            the ctx
+     * @param cause
+     *            the cause
+     * @throws Exception
+     *             the exception
      */
     @Override
     public void exceptionCaught(final ChannelHandlerContext ctx,

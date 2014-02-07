@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -34,12 +34,14 @@ import apns.netty.model.impl.ItemType;
 import apns.netty.queues.single.SingleMessageQueue;
 
 /**
+ * The Class SingleMessageCodec.
  * @author arung
  */
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class SingleMessageCodec extends ByteToMessageCodec<ApnsMessage> {
 
+    /** The Constant logger. */
     private static final Logger logger = Logger
             .getLogger(SingleMessageCodec.class);
     /** The Constant ALL_MESSAGES_WRITTEN_TO_CHANNEL_BY_ENCODER. */
@@ -103,6 +105,17 @@ public class SingleMessageCodec extends ByteToMessageCodec<ApnsMessage> {
      * (non-Javadoc)
      * @see io.netty.handler.codec.MessageToByteEncoder#encode(io.netty.channel.
      * ChannelHandlerContext, java.lang.Object, io.netty.buffer.ByteBuf)
+     */
+    /**
+     * Encode.
+     * @param ctx
+     *            the ctx
+     * @param msg
+     *            the msg
+     * @param out
+     *            the out
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void encode(final ChannelHandlerContext ctx,
@@ -218,6 +231,17 @@ public class SingleMessageCodec extends ByteToMessageCodec<ApnsMessage> {
      * (non-Javadoc)
      * @see io.netty.handler.codec.ByteToMessageDecoder#decode(io.netty.channel.
      * ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)
+     */
+    /**
+     * Decode.
+     * @param ctx
+     *            the ctx
+     * @param in
+     *            the in
+     * @param out
+     *            the out
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void decode(final ChannelHandlerContext ctx, final ByteBuf in,

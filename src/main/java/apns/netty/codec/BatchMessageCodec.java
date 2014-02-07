@@ -3,7 +3,7 @@
  * 
  **********************************************************************
 
-             Copyright (c) 2004 - 2014 netty-apns
+             Copyright (c) 2013 - 2014 netty-apns
              
 
 
@@ -104,6 +104,17 @@ public class BatchMessageCodec extends ByteToMessageCodec<ApnsBatchMessage> {
      * (non-Javadoc)
      * @see io.netty.handler.codec.ByteToMessageCodec#encode(io.netty.channel.
      * ChannelHandlerContext, java.lang.Object, io.netty.buffer.ByteBuf)
+     */
+    /**
+     * Encode.
+     * @param ctx
+     *            the ctx
+     * @param batch
+     *            the batch
+     * @param out
+     *            the out
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void encode(final ChannelHandlerContext ctx,
@@ -215,6 +226,17 @@ public class BatchMessageCodec extends ByteToMessageCodec<ApnsBatchMessage> {
      * (non-Javadoc)
      * @see io.netty.handler.codec.ByteToMessageCodec#decode(io.netty.channel.
      * ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)
+     */
+    /**
+     * Decode.
+     * @param ctx
+     *            the ctx
+     * @param in
+     *            the in
+     * @param out
+     *            the out
+     * @throws Exception
+     *             the exception
      */
     @Override
     protected void decode(final ChannelHandlerContext ctx, final ByteBuf in,
