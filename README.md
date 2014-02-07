@@ -91,6 +91,7 @@ APNSConfig.certificatePath=apns/apnscerts/apn_developer_identity.p12
 
 
 APNSConfig.production=false
+
 APNSConfig.password=xyzabcd
 
 
