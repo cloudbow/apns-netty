@@ -10,10 +10,10 @@ Features
 * Select between single and batch transport
 * Scalable
 * Less memory consumption and added value of Netty's features
-* Netty's zero copy used heaving to reduce cpu overhead on network traffic.
-* Interfaces for executing Feedback responses in different executor thread
+* Zero copy implemented by Netty used heavily to reduce cpu overhead on network writes.
+* Interfaces for executing Feedback responses in different executor thread.
 * Configurable properties
-* Achieved 100K per m1.large nodes(4 core 8 GB)
+* Achieved 500K per m1.large nodes(4 core 8 GB)
 
 
 Get Started
